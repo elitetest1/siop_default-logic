@@ -25,8 +25,6 @@
           tempType CDATA #REQUIRED>
 <!ELEMENT scenarios (scenario*, scenario_group*)>
 <!ELEMENT scenario (limiter+)>
-<!-- you can use below delimiter on scenario name -->
-<!-- "!" : intent, ":" : package, "," : plural    -->
 <!ATTLIST scenario
           name CDATA #REQUIRED
           tempType CDATA #REQUIRED
@@ -75,8 +73,8 @@
     <components>
 
         <component name="AP" tempType="SKIN" >
-            <limiter name="CPUFreqMax" step="0" temp="360:380:420:440" value="-1:1352000:1352000:832000" />
-            <limiter name="OverLimit"           temp="380"             value="1872000:1560000:-1" />
+            <limiter name="CPUFreqMax" step="0" temp="360:380:420:440" value="-1:-1:-1:-1" />
+            <limiter name="OverLimit"           temp="380"             value="-1:-1:-1" />
             <limiter name="GPUFreqMax" step="0" temp="360:380:450:470" value="-1:403000:403000:312000" />
             <limiter name="AppInstallDelay"     temp="320:340:400:420" value="-1:10000:10000:30000" />
             <limiter name="DexOptCpuset"        temp="360"             value="-1:1" />
@@ -120,32 +118,32 @@
         </scenario>
 
         <scenario name="SIPStart" tempType="SKIN" priority="2" >
-            <limiter name="CPUFreqMax" cond="for_temporary" temp="400:420:440:470" value="-1:2392000:1872000:1040000" />
+            <limiter name="CPUFreqMax" cond="for_temporary" temp="400:420:440:470" value="-1:-1:-1:-1" />
             <limiter name="GPUFreqMax" cond="for_temporary" temp="450"             value="-1:403000" />
         </scenario>
 
         <scenario name="AppStart" tempType="SKIN" priority="2" >
-            <limiter name="CPUFreqMax" cond="for_temporary" temp="400:420:440:470" value="-1:2392000:1872000:1040000" />
+            <limiter name="CPUFreqMax" cond="for_temporary" temp="400:420:440:470" value="-1:-1:-1:-1" />
             <limiter name="GPUFreqMax" cond="for_temporary" temp="450"             value="-1:403000" />
         </scenario>
 
         <scenario name="Badge" tempType="SKIN" priority="2" >
-            <limiter name="CPUFreqMax" cond="for_temporary" temp="400:420:440:470" value="-1:2392000:1872000:1040000" />
+            <limiter name="CPUFreqMax" cond="for_temporary" temp="400:420:440:470" value="-1:-1:-1:-1" />
             <limiter name="GPUFreqMax" cond="for_temporary" temp="450"             value="-1:403000" />
         </scenario>
 
         <scenario name="CallStart" tempType="SKIN" priority="2" >
-            <limiter name="CPUFreqMax" cond="for_temporary" temp="400:420:440:470" value="-1:2392000:1872000:1040000" />
+            <limiter name="CPUFreqMax" cond="for_temporary" temp="400:420:440:470" value="-1:-1:-1:-1" />
             <limiter name="GPUFreqMax" cond="for_temporary" temp="450"             value="-1:403000" />
         </scenario>
 
         <scenario name="WakeUp" tempType="SKIN" priority="2" >
-            <limiter name="CPUFreqMax" cond="for_temporary" temp="400:420:440:470" value="-1:2392000:1872000:1040000" />
+            <limiter name="CPUFreqMax" cond="for_temporary" temp="400:420:440:470" value="-1:-1:-1:-1" />
             <limiter name="GPUFreqMax" cond="for_temporary" temp="450"             value="-1:403000" />
         </scenario>
 
         <scenario name="VtCallControl" tempType="SKIN" priority="1">
-            <limiter name="CPUFreqMax"                                value="832000" />
+            <limiter name="CPUFreqMax"                                value="-1" />
             <limiter name="GPUFreqMax" temp="300"                     value="-1:312000" />
             <limiter name="Brightness" temp="320:340:410:430:450:470:530:550:600" value="-1:204:204:149:125:100:100:92:12" />
             <limiter name="Charging"   temp="320"             value="-1:70"           />
@@ -153,7 +151,7 @@
         </scenario>
 
         <scenario name="SecVtCall" tempType="SKIN" priority="1">
-            <limiter name="CPUFreqMax"                                value="832000" />
+             <limiter name="CPUFreqMax"                                value="-1" />
             <limiter name="GPUFreqMax" temp="300"                     value="-1:312000" />
             <limiter name="Brightness" temp="320:340:410:430:450:470:530:550:600" value="-1:204:204:149:125:100:100:92:12" />
             <limiter name="Charging"   temp="320"             value="-1:70"           />
@@ -161,7 +159,7 @@
         </scenario>
 
         <scenario name="LiveCam" tempType="SKIN" priority="2">
-            <limiter name="CPUFreqMax"                        value="832000" />
+            <limiter name="CPUFreqMax"                        value="-1" />
             <limiter name="Brightness" temp="320:340:410:430:450:470:530:550:600" value="-1:204:204:149:125:100:100:92:12" />
             <limiter name="Charging"   temp="320"             value="-1:70"           />
             <limiter name="CameraFps"  temp="320"             value="-1:1" />
@@ -233,12 +231,12 @@
         </scenario>
 
         <scenario name="SIPStartMW" tempType="SKIN" priority="2">
-            <limiter name="CPUFreqMax" cond="for_temporary" temp="340:360:380:400:420:440" value="-1:2184000:1872000:1560000:1352000:832000" />
+            <limiter name="CPUFreqMax" cond="for_temporary" temp="340:360:380:400:420:440" value="-1:-1:-1:-1:-1:-1" />
             <limiter name="GPUFreqMax" cond="for_temporary" temp="400"                     value="-1:585000:494000"                          />
         </scenario>
 
         <scenario name="AppStartMW" tempType="SKIN" priority="2">
-            <limiter name="CPUFreqMax" cond="for_temporary" temp="400:420:440" value="-1:1872000:1456000" />
+            <limiter name="CPUFreqMax" cond="for_temporary" temp="400:420:440" value="-1:-1:-1" />
             <limiter name="GPUFreqMax" cond="for_temporary" temp="400:420:440" value="-1:585000:494000" />
         </scenario>
 
@@ -316,23 +314,23 @@
         </scenario>
 
         <scenario name="BrowserApp" tempType="SKIN" priority="1" >
-            <limiter name="CPUFreqMax" temp="310:330:350:380:420:440" value="-1:1560000:1352000:1040000:1040000:832000" />
-            <limiter name="OverLimit"  temp="330:350:380:400:420:440"     value="2184000:1872000:1664000:1560000:1352000:-1" />
+            <limiter name="CPUFreqMax" temp="310:330:350:380:420:440" value="-1:-1:-1:-1:-1:-1" />
+            <limiter name="OverLimit"  temp="330:350:380:400:420:440"     value="-1:-1:-1:-1:-1:-1" />
         </scenario>
 
         <scenario name="SnsApp" tempType="SKIN" priority="1" >
-            <limiter name="CPUFreqMax" temp="310:330:350:380:420:440" value="-1:1560000:1352000:1040000:1040000:832000" />
-            <limiter name="OverLimit"  temp="330:350:380:400:420:440"     value="2184000:1872000:1664000:1560000:1352000:-1" />
+            <limiter name="CPUFreqMax" temp="310:330:350:380:420:440" value="-1:-1:-1:-1:-1:-1" />
+            <limiter name="OverLimit"  temp="330:350:380:400:420:440"     value="-1:-1:-1:-1:-1:-1" />
         </scenario>
 
         <scenario name="VideoStreamingApp" tempType="SKIN" priority="1" >
-            <limiter name="CPUFreqMax" temp="310:330:350:380:420:440" value="-1:1560000:1352000:1040000:1040000:832000" />
-            <limiter name="OverLimit"  temp="330:350:380:420:440"     value="2184000:1872000:1352000:1352000:-1"        />
+            <limiter name="CPUFreqMax" temp="310:330:350:380:420:440" value="-1:-1:-1:-1:-1:-1" />
+            <limiter name="OverLimit"  temp="330:350:380:420:440"     value="-1:-1:-1:-1:-1"        />
         </scenario>
 
         <scenario name="NavigationApp" tempType="SKIN" priority="1" >
-            <limiter name="CPUFreqMax" temp="310:330:350:380:420:440"  value="-1:1560000:1352000:1040000:1040000:832000" />
-            <limiter name="OverLimit"  temp="330:350:380:420:440"      value="2184000:1872000:1352000:1352000:-1"        />
+            <limiter name="CPUFreqMax" temp="310:330:350:380:420:440"  value="-1:-1:-1:-1:-1:-1" />
+            <limiter name="OverLimit"  temp="330:350:380:420:440"      value="-1:-1:-1:-1:-1"        />
         </scenario>
 
         <scenario name="Navigation" tempType="SKIN" >
