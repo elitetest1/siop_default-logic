@@ -75,8 +75,8 @@
         <component name="AP" tempType="SKIN" >
             <limiter name="CPUFreqMax" step="0" temp="360:380:420:440" value="-1:-1:-1:-1" />
             <limiter name="OverLimit"           temp="380"             value="-1:-1:-1" />
-            <limiter name="GPUFreqMax" step="0" temp="360:380:450:470" value="-1:403000:403000:312000" />
-            <limiter name="AppInstallDelay" temp="320:340:400:420" value="-1:-1:-1:-1" />
+            <limiter name="GPUFreqMax" step="0" temp="360:380:450:470" value="-1:-1:-1:-1" />
+            <limiter name="AppInstallDelay"     temp="320:340:400:420" value="-1:-1:-1:-1" />
             <limiter name="DexOptCpuset"        temp="360"             value="-1:1" />
             <limiter name="LLCOffControl" temp="380" value="-1:1" />
         </component>
@@ -98,7 +98,7 @@
         </component>
 
         <component name="AP+DISPLAY" tempType="SKIN" >
-            <limiter name="AppInstallDelay" temp="320:340:400:420" value="-1:10000:10000:30000" />
+            <limiter name="AppInstallDelay" temp="320:340:400:420" value="-1:-1:-1:-1" />
         </component>
 
         <component name="CHG+DISPLAY" tempType="SKIN">
@@ -119,40 +119,40 @@
 
         <scenario name="SIPStart" tempType="SKIN" priority="2" >
             <limiter name="CPUFreqMax" cond="for_temporary" temp="400:420:440:470" value="-1:-1:-1:-1" />
-            <limiter name="GPUFreqMax" cond="for_temporary" temp="450"             value="-1:403000" />
+            <limiter name="GPUFreqMax" cond="for_temporary" temp="450"             value="-1:-1" />
         </scenario>
 
         <scenario name="AppStart" tempType="SKIN" priority="2" >
             <limiter name="CPUFreqMax" cond="for_temporary" temp="400:420:440:470" value="-1:-1:-1:-1" />
-            <limiter name="GPUFreqMax" cond="for_temporary" temp="450"             value="-1:403000" />
+            <limiter name="GPUFreqMax" cond="for_temporary" temp="450"             value="-1:-1" />
         </scenario>
 
         <scenario name="Badge" tempType="SKIN" priority="2" >
             <limiter name="CPUFreqMax" cond="for_temporary" temp="400:420:440:470" value="-1:-1:-1:-1" />
-            <limiter name="GPUFreqMax" cond="for_temporary" temp="450"             value="-1:403000" />
+            <limiter name="GPUFreqMax" cond="for_temporary" temp="450"             value="-1:-1" />
         </scenario>
 
         <scenario name="CallStart" tempType="SKIN" priority="2" >
             <limiter name="CPUFreqMax" cond="for_temporary" temp="400:420:440:470" value="-1:-1:-1:-1" />
-            <limiter name="GPUFreqMax" cond="for_temporary" temp="450"             value="-1:403000" />
+            <limiter name="GPUFreqMax" cond="for_temporary" temp="450"             value="-1:-1" />
         </scenario>
 
         <scenario name="WakeUp" tempType="SKIN" priority="2" >
             <limiter name="CPUFreqMax" cond="for_temporary" temp="400:420:440:470" value="-1:-1:-1:-1" />
-            <limiter name="GPUFreqMax" cond="for_temporary" temp="450"             value="-1:403000" />
+            <limiter name="GPUFreqMax" cond="for_temporary" temp="450"             value="-1:-1" />
         </scenario>
 
         <scenario name="VtCallControl" tempType="SKIN" priority="1">
             <limiter name="CPUFreqMax"                                value="-1" />
-            <limiter name="GPUFreqMax" temp="300"                     value="-1:312000" />
+            <limiter name="GPUFreqMax" temp="300"                     value="-1:-1" />
             <limiter name="Brightness" temp="320:340:410:430:450:470:530:550:600" value="-1:204:204:149:125:100:100:92:12" />
             <limiter name="Charging"   temp="320"             value="-1:70"           />
             <limiter name="CameraFps"       temp="320"        value="-1:1" />
         </scenario>
 
         <scenario name="SecVtCall" tempType="SKIN" priority="1">
-             <limiter name="CPUFreqMax"                                value="-1" />
-            <limiter name="GPUFreqMax" temp="300"                     value="-1:312000" />
+            <limiter name="CPUFreqMax"                                value="-1" />
+            <limiter name="GPUFreqMax" temp="300"                     value="-1:-1" />
             <limiter name="Brightness" temp="320:340:410:430:450:470:530:550:600" value="-1:204:204:149:125:100:100:92:12" />
             <limiter name="Charging"   temp="320"             value="-1:70"           />
             <limiter name="CameraFps"  temp="360"                     value="-1:1" />
@@ -183,20 +183,20 @@
         </scenario>
 
         <scenario name="CameraSlowMotion" tempType="SKIN" priority="1">
-            <limiter name="CPUFreqMax" step="0" temp="340" value="-1:2184000:1560000:1560000:1352000" />
+            <limiter name="CPUFreqMax" step="0" temp="340" value="-1:-1:-1:-1:-1" />
         </scenario>
 
         <scenario name="ARemoji:com.samsung.android.aremoji" tempType="SKIN" >
-            <limiter name="GPUFreqMax" value="312000" />
+            <limiter name="GPUFreqMax" value="-1" />
         </scenario>
 
         <scenario name="ARGroup:com.sec.android.mimage.avatarstickers,com.samsung.android.aremojieditor,com.samsung.android.ardrawing" tempType="SKIN" >
-            <limiter name="GPUFreqMax" temp="360" value="-1:312000" />
+            <limiter name="GPUFreqMax" temp="360" value="-1:-1" />
         </scenario>
 
         <scenario name="HeavyLoadApp" tempType="SKIN" priority="1">
             <limiter name="CPUFreqMax" temp="340"             value="-1:-1:-1:-1:-1" />
-            <limiter name="GPUFreqMax"                        value="312000" />
+            <limiter name="GPUFreqMax"                        value="-1" />
             <limiter name="Brightness"       temp="410:430:450:470:530:550" value="204:149:125:100:100:94" />
         </scenario>
 
@@ -206,50 +206,50 @@
         </scenario>
 
         <scenario name="MultiWindow" tempType="SKIN" priority="1">
-            <limiter name="CPUFreqMax" step="0" temp="340"     value="-1:1352000:1352000:1040000:832000" />
-            <limiter name="GPUFreqMax" step="0" temp="340"     value="-1:403000:403000:312000"           />
+            <limiter name="CPUFreqMax" step="0" temp="340"     value="-1:-1:-1:-1:-1" />
+            <limiter name="GPUFreqMax" step="0" temp="340"     value="-1:-1:-1:-1"    />
         </scenario>
 
         <scenario name="GameInMultiWindow" tempType="SKIN" priority="1">
-            <limiter name="CPUFreqMax" step="0" temp="340"     value="-1:1352000:1352000:1040000:832000:624000"     />
-            <limiter name="GPUFreqMax" step="0" temp="340"     value="-1:403000:403000:312000:221000:221000:130000" />
-            <limiter name="OverLimit"           temp="340"     value="2184000:1872000:1560000:1352000:-1"           />
+            <limiter name="CPUFreqMax" step="0" temp="340"     value="-1:-1:-1:-1:-1:-1"     />
+            <limiter name="GPUFreqMax" step="0" temp="340"     value="-1:-1:-1:-1:-1:-1:-1" />
+            <limiter name="OverLimit"           temp="340"     value="-1:-1:-1:-1:-1"           />
         </scenario>
 
         <scenario name="Dex" tempType="SKIN" priority="1">
-            <limiter name="CPUFreqMax" step="0" temp="340"     value="-1:1352000:1352000:1040000:832000" />
-            <limiter name="GPUFreqMax" step="0" temp="340"     value="-1:403000:403000:312000"           />
+            <limiter name="CPUFreqMax" step="0" temp="340"     value="-1:-1:-1:-1:-1" />
+            <limiter name="GPUFreqMax" step="0" temp="340"     value="-1:-1:-1:-1"    />
         </scenario>
 
         <scenario name="SmartView!ScreenMirroring_enable" tempType="SKIN" priority="1" >
-            <limiter name="CPUFreqMax" step="0" temp="340"     value="-1:1352000:1352000:1040000:832000" />
-            <limiter name="GPUFreqMax" step="0" temp="340"     value="-1:403000:403000:312000"           />
+            <limiter name="CPUFreqMax" step="0" temp="340"     value="-1:-1:-1:-1:-1" />
+            <limiter name="GPUFreqMax" step="0" temp="340"     value="-1:-1:-1:-1"    />
         </scenario>
 
         <scenario name="DexStabilizerMode" tempType="SKIN" priority="4" >
-            <limiter name="CPUFreqMax" value="533000" />
+            <limiter name="CPUFreqMax" value="-1" />
         </scenario>
 
         <scenario name="SIPStartMW" tempType="SKIN" priority="2">
             <limiter name="CPUFreqMax" cond="for_temporary" temp="340:360:380:400:420:440" value="-1:-1:-1:-1:-1:-1" />
-            <limiter name="GPUFreqMax" cond="for_temporary" temp="400"                     value="-1:585000:494000"                          />
+            <limiter name="GPUFreqMax" cond="for_temporary" temp="400"                     value="-1:-1:-1"                          />
         </scenario>
 
         <scenario name="AppStartMW" tempType="SKIN" priority="2">
             <limiter name="CPUFreqMax" cond="for_temporary" temp="400:420:440" value="-1:-1:-1" />
-            <limiter name="GPUFreqMax" cond="for_temporary" temp="400:420:440" value="-1:585000:494000" />
+            <limiter name="GPUFreqMax" cond="for_temporary" temp="400:420:440" value="-1:-1:-1" />
         </scenario>
 
         <scenario name="Heavyuser" tempType="SKIN" priority="2">
             <limiter name="CPUFreqMax" multistage="1" hvmode="false"
                      temp="450:500:510:520" p="50" i="1" d="30" unit="1000"
-                     max="2912000:1560000:1352000:1352000"
-                     min="1560000:1352000:1352000:1352000" />
+                     max="-1:-1:-1:-1"
+                     min="-1:-1:-1:-1" />
 
             <limiter name="GPUFreqMax" multistage="1"  hvmode="false"
                      temp="440:500:510:520" p="50" i="1" d="30" unit="400"
-                     max="858000:494000:403000:403000"
-                     min="494000:403000:403000:403000" />
+                     max="-1:-1:-1:-1"
+                     min="-1:-1:-1:-1" />
         </scenario>
 
         <scenario name="HighBrightness"  tempType="SKIN*BAT" priority="1" region="XSG" >
@@ -261,7 +261,7 @@
         </scenario>
 
         <scenario name="NReal" tempType="SKIN" >
-            <limiter name="CPUFreqMax" step="0" temp="350:380" value="-1:1040000" />
+            <limiter name="CPUFreqMax" step="0" temp="350:380" value="-1:-1" />
         </scenario>
 
         <scenario name="LowTemp" tempType="BAT" priority="3">
@@ -272,13 +272,13 @@
         </scenario>
 
         <scenario name="SpayClockLimit" tempType="SKIN" priority="2">
-            <limiter name="CPUFreqMax" temp="360:380:450:470" value="2288000:1768000:1768000:1352000" />
+            <limiter name="CPUFreqMax" temp="360:380:450:470" value="-1:-1:-1:-1" />
         </scenario>
 
         <scenario name="PowerSharing" tempType="SKIN" priority="3">
-            <limiter name="CPUFreqMax" temp="450" value="1768000:1352000" />
+            <limiter name="CPUFreqMax" temp="450" value="-1:-1" />
             <limiter name="OverLimit"  temp="360" value="-1" />
-            <limiter name="GPUFreqMax" temp="450" value="403000:312000" />
+            <limiter name="GPUFreqMax" temp="450" value="-1:-1" />
         </scenario>
 
         <scenario name="retailmode:com.samsung.rms.retailagent.global" tempType="SKIN" priority="1">
@@ -291,7 +291,7 @@
 
         <scenario name="SmartSwitchTransfer" tempType="SKIN" priority="2">
             <limiter name="Charging"    temp="280"                 value="-1:70" />
-            <limiter name="OverLimit"   temp="380:400:420"         value="1560000:1560000:-1" />
+            <limiter name="OverLimit"   temp="380:400:420"         value="-1:-1:-1" />
             <limiter name="WifiP2pTput" temp="340:360:380:400:450" value="-1:300:200:100:50" />
         </scenario>
 
@@ -304,13 +304,13 @@
         </scenario>
 
         <scenario name="DimmingGameRestriction" tempType="SKIN" priority="1">
-            <limiter name="CPUFreqMax" value="832000" />
-            <limiter name="GPUFreqMax" value="312000" />
+            <limiter name="CPUFreqMax" value="-1" />
+            <limiter name="GPUFreqMax" value="-1" />
         </scenario>
 
         <scenario name="MaxDimmingGameRestriction" tempType="SKIN" priority="1">
-            <limiter name="CPUFreqMax" value="832000" />
-            <limiter name="GPUFreqMax" value="312000" />
+            <limiter name="CPUFreqMax" value="-1" />
+            <limiter name="GPUFreqMax" value="-1" />
         </scenario>
 
         <scenario name="BrowserApp" tempType="SKIN" priority="1" >
@@ -339,7 +339,7 @@
         </scenario>
 
         <scenario_group name="GameThermalCpuControl" tempType="SKIN" >
-            <scenario id="-7" limiter="CPUFreqMax"                     value="1144000" />
+            <scenario id="-7" limiter="CPUFreqMax"                     value="-1" />
             <scenario id="-6" limiter="CPUFreqMax" step="0" temp="370:380:400" value="-1:-1:-1"  />
             <scenario id="-5" limiter="CPUFreqMax" step="0" temp="370:380:400" value="-1:-1:-1"  />
             <scenario id="-4" limiter="CPUFreqMax" step="0" temp="370:380:400" value="-1:-1:-1"  />
@@ -355,13 +355,13 @@
         </scenario_group>
 
         <scenario_group name="GameThermalGpuControl" tempType="SKIN" >
-            <scenario id="-3" limiter="GPUFreqMax"                     value="221000" />
-            <scenario id="-2" limiter="GPUFreqMax" step="0" temp="370:380:400" value="-1:312000:221000"  />
-            <scenario id="-1" limiter="GPUFreqMax" step="0" temp="370:380:400" value="-1:403000:312000"  />
-            <scenario id="0" limiter="GPUFreqMax" step="0" temp="370:380:400"  value="-1:494000:403000"  />
-            <scenario id="1" limiter="GPUFreqMax" step="0" temp="370:380:400"  value="-1:585000:494000"  />
-            <scenario id="2" limiter="GPUFreqMax" step="0" temp="370:380:400"  value="-1:676000:585000"  />
-            <scenario id="3" limiter="GPUFreqMax" step="0" temp="370:400"      value="-1:767000:676000"  />
+            <scenario id="-3" limiter="GPUFreqMax"                     value="-1" />
+            <scenario id="-2" limiter="GPUFreqMax" step="0" temp="370:380:400" value="-1:-1:-1"  />
+            <scenario id="-1" limiter="GPUFreqMax" step="0" temp="370:380:400" value="-1:-1:-1"  />
+            <scenario id="0" limiter="GPUFreqMax" step="0" temp="370:380:400"  value="-1:-1:-1"  />
+            <scenario id="1" limiter="GPUFreqMax" step="0" temp="370:380:400"  value="-1:-1:-1"  />
+            <scenario id="2" limiter="GPUFreqMax" step="0" temp="370:380:400"  value="-1:-1:-1"  />
+            <scenario id="3" limiter="GPUFreqMax" step="0" temp="370:400"      value="-1:-1"  />
             <scenario id="4" limiter="GPUFreqMax" value="-1" />
         </scenario_group>
 
