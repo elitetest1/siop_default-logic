@@ -76,7 +76,7 @@
             <limiter name="CPUFreqMax" step="0" temp="360:380:420:440" value="-1:-1:-1:-1" />
             <limiter name="OverLimit"           temp="380"             value="-1:-1:-1" />
             <limiter name="GPUFreqMax" step="0" temp="360:380:450:470" value="-1:403000:403000:312000" />
-            <limiter name="AppInstallDelay"     temp="320:340:400:420" value="-1:10000:10000:30000" />
+            <limiter name="AppInstallDelay" temp="320:340:400:420" value="-1:-1:-1:-1" />
             <limiter name="DexOptCpuset"        temp="360"             value="-1:1" />
             <limiter name="LLCOffControl" temp="380" value="-1:1" />
         </component>
